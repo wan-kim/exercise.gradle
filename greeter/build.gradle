@@ -1,0 +1,34 @@
+//group 'kr.devmax'
+//version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+//apply plugin: 'groovy'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':greeting-library')
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
+//    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4', {
+//        exclude module: 'groovy-all'
+//    }
+}
+
+mainClassName = 'greeter.Greeter'
+
+distZip {
+    from project(':docs').asciidoctor, {
+        into "${project.name}-${version}"
+    }
+}
+
+distTar {
+    from project(':docs').asciidoctor, {
+        into "${project.name}-${version}"
+    }
+}

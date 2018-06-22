@@ -1,0 +1,12 @@
+//group 'kr.devmax'
+//version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy:2.4.10'
+}

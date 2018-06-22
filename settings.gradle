@@ -1,0 +1,6 @@
+rootProject.name = 'exercise.gradle'
+
+include 'greeting-library'
+include 'greeter'
+include 'docs'
+
